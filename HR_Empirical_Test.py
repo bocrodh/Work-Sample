@@ -84,26 +84,26 @@ def main():
     st.set_page_config(page_icon=":money_with_wings:", layout="wide",) 
 
     #Customizing sidebar filters 
-    st.sidebar.header("Filter Criteria:") 
-    bb_number = st.sidebar.multiselect("BB Number:", options=df["BB Number"].unique(), default=df['BB Number'].unique(),)  
-    df_selection = df.query("`BB Number` ==@bb_number") 
+    #st.sidebar.header("Filter Criteria:") 
+    #bb_number = st.sidebar.multiselect("BB Number:", options=df["BB Number"].unique(), default=df['BB Number'].unique(),)  
+    #df_selection = df.query("`BB Number` ==@bb_number") 
     
     #Displaying Dataframe 
-    st.header('Table 1')
-    filtered = st.multiselect("Filter fields", options=df_selection.columns, default=['BB Number'])
+    #st.header('Table 1')
+    #filtered = st.multiselect("Filter fields", options=df_selection.columns, default=['BB Number'])
  
     #Editing DataFrame Appearance  
-    fig = go.Figure(data=[go.Table(
-    header=dict(values=list(filtered),
-      fill_color='#575a5e',
-      align='center', 
-      font=dict(color='white', size=15)),
-    cells=dict(values=[df_selection[col] for col in filtered],
-     fill_color='#ffffff',
-     align='center', 
-     font=dict(color='black', size=13)))])
-    fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, height=450)
-    st.plotly_chart(fig, use_container_width=True)
+    #fig = go.Figure(data=[go.Table(
+    #header=dict(values=list(filtered),
+    #  fill_color='#575a5e',
+    #  align='center', 
+    #  font=dict(color='white', size=15)),
+    #cells=dict(values=[df_selection[col] for col in filtered],
+    # fill_color='#ffffff',
+    # align='center', 
+    # font=dict(color='black', size=13)))])
+    #fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0}, height=450)
+    #st.plotly_chart(fig, use_container_width=True)
 
     st.markdown(
     """
