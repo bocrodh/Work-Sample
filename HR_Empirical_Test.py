@@ -11,14 +11,14 @@ Subject: Empirical Test                 "
 #Section 4: Dashboard 
 
 ###################################################################### Library imports ####################################################################
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+import pandas as pd 
 import streamlit as st
 import plotly.graph_objects as go
+from PIL import Image
 import plotly.express as px
+import streamlit_authenticator as stauth 
+import pickle
 from pathlib import Path 
-
 ############################################################# Data cleaning and verifications ##############################################################
 #Read in data
 url = (r'https://github.com/bocrodh/21eB6-WCN-Ao-v-JK-yRpRT0e-qp/blob/main/CB%20BB%20Dashboard%20for%20Canada%20(September%202022).csv?raw=true') 
