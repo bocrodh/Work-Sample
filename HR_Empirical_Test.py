@@ -20,20 +20,28 @@ import pickle
 from pathlib import Path 
 ############################################################# Data cleaning and verifications ##############################################################
 #Read in data
-url = (r'https://github.com/bocrodh/21eB6-WCN-Ao-v-JK-yRpRT0e-qp/blob/main/CB%20BB%20Dashboard%20for%20Canada%20(September%202022).csv?raw=true') 
-df = pd.read_csv(url, header=0)
+#url = (r'https://github.com/bocrodh/21eB6-WCN-Ao-v-JK-yRpRT0e-qp/blob/main/CB%20BB%20Dashboard%20for%20Canada%20(September%202022).csv?raw=true') 
+#df = pd.read_csv(url, header=0)
 
 #Sort data
-df.sort_values("date", inplace=True)
+#df.sort_values("date", inplace=True)
 
 #Delete duplicate rows and only keep first instance
-df = df.drop_duplicates(keep='first')
+#df = df.drop_duplicates(keep='first')
 
 #Subset relevant fields for analysis"
-df = df["AAA","BBB"]
+#df = df["AAA","BBB"]
 
 #Format date object 
-df['date'] = pd.to_datetime(df["date"].dt.strftime('%Y-%m'))
+#df['date'] = pd.to_datetime(df["date"].dt.strftime('%Y-%m'))
+
+xls = (r'https://github.com/bocrodh/21eB6-WCN-Ao-v-JK-yRpRT0e-qp/blob/main/wb_remittance_data.xlsx?raw=true')
+
+cost = pd.read_excel(xls, 'Cost of sending $200', header=0)
+times = pd.read_excel(xls, '<1 Hour Options', header=0)
+provider = pd.read_excel(xls, 'Proportion of MT', header=0)
+banked = pd.read_excel(xls, 'Banked', header=0)
+
 
 ###################################################################### Data manipulation/Plots ###############################################################
 
