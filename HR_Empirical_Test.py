@@ -84,7 +84,7 @@ def main():
     st.set_page_config(page_icon=":money_with_wings:", layout="wide",) 
 
     #Customizing sidebar filters 
-    #st.sidebar.header("Filter Criteria:") 
+    st.sidebar.header("Filter Criteria:") 
     #bb_number = st.sidebar.multiselect("BB Number:", options=df["BB Number"].unique(), default=df['BB Number'].unique(),)  
     #df_selection = df.query("`BB Number` ==@bb_number") 
     
