@@ -39,7 +39,7 @@ df['date'] = pd.to_datetime(df["date"].dt.strftime('%Y-%m'))
 ###################################################################### Data manipulation/Plots ##################################################################
 
 #Question 1 Plot: 
-fig = px.line(cost, x="Year", y='%', color="Country", title="Remittance Fee as % of $200 <br><sup>Source: https://remittanceprices.worldbank.org/</sup>")
+fig = px.line(cost, x="Year", y='%', color="Country", title="Remittance Fee as % of $200")
 fig.update_traces(mode="lines")
 fig.update_layout(hovermode="x unified") 
 fig.update_xaxes(tickangle= -90, nticks=4)
@@ -48,14 +48,14 @@ fig.update_traces(patch={"line": {"color": "MidnightBlue", "width": 6, "dash": '
 fig.show() 
 
 #Question 2 Plot:  
-fig2 = px.line(times, x="Year", y='Number of Service Providers', color="Country", title="Access to <1 Hour Remittance Services (by corridor)<br><sup>Source: https://remittanceprices.worldbank.org/</sup>")
+fig2 = px.line(times, x="Year", y='Number of Service Providers', color="Country", title="Access to <1 Hour Remittance Services (by corridor)")
 fig2.update_traces(mode="lines")
 fig2.update_layout(hovermode="x unified") 
 fig2.update_xaxes(tickangle= -90, nticks=4)
 fig2.show() 
 
 #Question 3 Plot:  
-fig3 = px.line(banked, x='Year', y='% Banked', color="Country", title="% of Banked Population <br><sup>Source: https://databank.worldbank.org/source/global-financial-inclusion/</sup>")
+fig3 = px.line(banked, x='Year', y='% Banked', color="Country", title="% of Banked Population")
 fig3.update_traces(mode="lines")
 fig3.update_layout(hovermode="x unified") 
 fig3.update_xaxes(tickangle= -90)
@@ -64,11 +64,11 @@ fig3.update_traces(patch={"line": {"color": "MidnightBlue", "width": 6, "dash": 
 fig3.show() 
 
 #Question 4 Plot:  
-fig4 = px.line(provider, x='Year', y='%', color="Country", title="% of Remittances Completed Money Transfer Services (by corridor) <br><sup>Source: https://remittanceprices.worldbank.org/</sup>")
+fig4 = px.line(provider, x='Year', y='%', color="Country", title="% of Remittances Completed Money Transfer Services (by corridor)")
 fig4.update_traces(mode="lines")
 fig4.update_layout(hovermode="x unified") 
 fig4.update_xaxes(tickangle= -90, nticks=4)
-fig4.show() 
+fig4.show()  
 
 ###################################################################### Dashboard ############################################################################
 def main(): 
@@ -118,4 +118,6 @@ def main():
     plot3.plotly_chart(fig3, use_container_width=True)    
     plot4.plotly_chart(fig4, use_container_width=True)
     
-    main()
+    main() 
+    
+#END 
