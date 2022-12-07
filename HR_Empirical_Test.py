@@ -36,7 +36,7 @@ df = df["AAA","BBB"]
 #Format date object 
 df['date'] = pd.to_datetime(df["date"].dt.strftime('%Y-%m'))
 
-###################################################################### Data manipulation/Plots ##################################################################
+###################################################################### Data manipulation/Plots ###############################################################
 
 #Question 1 Plot: 
 fig = px.line(cost, x="Year", y='%', color="Country", title="Remittance Fee as % of $200")
