@@ -79,7 +79,7 @@ fig4.show()
 
 ###################################################################### Dashboard ############################################################################
 def main(): 
-      
+               
     #Create blank webpage 
     st.set_page_config(page_icon=":money_with_wings:", layout="wide",) 
 
@@ -96,7 +96,5 @@ def main():
     plot3, plot4 = st.columns(2,gap='small')
     plot3.plotly_chart(fig3, use_container_width=True)    
     plot4.plotly_chart(fig4, use_container_width=True)
-    
-    main() 
-    
+main()     
 #END 
