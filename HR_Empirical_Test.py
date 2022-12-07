@@ -5,10 +5,11 @@ Author: Hiru Rodrigo                    "
 Subject: Empirical Test                 "
 """""""""""""""""""""""""""""""""""""""""
 #################################################################### Code outline #########################################################################
-"Section 1: Library imports" 
-"Section 2: Data cleaning and verifications"
-"Section 3: Data manipulation/Plots" 
-"Section 4: Dashboard" 
+
+#Section 1: Library imports 
+#Section 2: Data cleaning and verifications
+#Section 3: Data manipulation/Plots 
+#Section 4: Dashboard 
 
 ###################################################################### Library imports ####################################################################
 import numpy as np
