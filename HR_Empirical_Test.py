@@ -75,8 +75,8 @@ fig4.show()
 
 ###################################################################### Dashboard ############################################################################
 def main(): 
-               
- #Create blank webpage 
+      
+    #Create blank webpage 
     st.set_page_config(page_icon=":money_with_wings:", layout="wide",) 
 
     #Customizing sidebar filters 
